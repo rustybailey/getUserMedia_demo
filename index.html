@@ -1,0 +1,39 @@
+<!-- In order to open this locally, you must close Chrome
+  and open an instance by using PowerShell to navigate to
+  Chrome's folder "C:\Program Files (x86)\Google\Chrome\Application"
+  and use this command:
+
+  .\chrome.exe --allow-file-access-from-files -->
+
+
+<!DOCTYPE html>    
+<html>    
+  <head>
+    <script src="usermedia.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Photobooth Demo</title>  
+  </head> 
+    
+  <body> 
+
+    <h1>Photobooth Demo</h1>
+    <p>
+      This is a demo using the getUserMedia API and canvas. <br>
+      Click "Allow" at the top to access your webcam.
+    </p>
+
+    <div id = "wrapper">  
+
+      <video id="camFeed" width="320" height="240" autoplay></video>  
+      <canvas id="photo" width="320" height="240"></canvas> 
+      <div class="buttondiv">
+        <input id="retry" type="button" value="Retry Connection" onclick='init()'>  
+      </div>
+      <div class="buttondiv"> 
+        <input id="snapshot" type="button" value="Take Snapshot!" onclick ='takePhoto()'>
+      </div>  
+
+    </div>
+
+  </body>  
+</html>  
